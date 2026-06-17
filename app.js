@@ -97,7 +97,7 @@ app.use((req, res, next) => {
 
 // Home Route
 app.get('/', (req, res) => {
-  res.render('home.ejs', { title: "Wanderlust Home" });
+  res.render('home.ejs', { title: "StayVista Home" });
 });
 
 
