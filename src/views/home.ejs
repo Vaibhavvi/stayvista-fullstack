@@ -1,0 +1,1088 @@
+<% layout("/layout/boilerplate") %>
+
+<!-- ================= HERO SECTION ================= -->
+<section class="sv-hero">
+    <div class="sv-hero-bg"></div>
+
+    <div class="container position-relative">
+        <div class="row align-items-center min-vh-75 py-5">
+            <div class="col-lg-7 py-5">
+
+                <span class="sv-eyebrow">
+                    <i class="bi bi-stars me-2"></i>
+                    YOUR NEXT GETAWAY STARTS HERE
+                </span>
+
+                <h1 class="sv-hero-title mt-4">
+                    Find your
+                    <span>happy place.</span>
+                </h1>
+
+                <p class="sv-hero-text mt-4">
+                    From peaceful mountain cabins to dreamy beach villas,
+                    discover stays that turn every trip into a beautiful memory.
+                </p>
+
+                <div class="d-flex flex-wrap gap-3 mt-4">
+                    <a href="/listings" class="btn sv-btn-primary">
+                        Explore stays
+                        <i class="bi bi-arrow-up-right ms-2"></i>
+                    </a>
+
+                    <a href="#why-stayvista" class="btn sv-btn-outline">
+                        Discover StayVista
+                    </a>
+                </div>
+
+                <div class="sv-trust-row mt-5">
+                    <div class="sv-avatar-stack">
+                        <span>R</span>
+                        <span>A</span>
+                        <span>S</span>
+                        <span><i class="bi bi-heart-fill"></i></span>
+                    </div>
+
+                    <div>
+                        <div class="sv-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <small>Loved by travelers who seek more</small>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-5 d-none d-lg-block">
+                <div class="sv-hero-image-wrap">
+                    <img
+                        src="https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?auto=format&fit=crop&w=1000&q=85"
+                        alt="Beautiful holiday home surrounded by nature"
+                        class="sv-hero-image"
+                        fetchpriority="high">
+
+                    <div class="sv-floating-card">
+                        <div class="sv-floating-icon">
+                            <i class="bi bi-house-heart-fill"></i>
+                        </div>
+                        <div>
+                            <strong>Your kind of escape</strong>
+                            <p class="mb-0">Find a place to call yours.</p>
+                        </div>
+                    </div>
+
+                    <div class="sv-image-badge">
+                        <i class="bi bi-geo-alt-fill me-1"></i>
+                        Somewhere beautiful
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= QUICK SEARCH ================= -->
+<section class="sv-search-section">
+    <div class="container">
+        <form action="/listings" method="GET" class="sv-search-box">
+
+            <div class="sv-search-field">
+                <label for="destination">
+                    <i class="bi bi-geo-alt me-2"></i>Destination
+                </label>
+
+                <input
+                    type="text"
+                    id="destination"
+                    name="location"
+                    placeholder="Where do you want to go?">
+            </div>
+
+            <div class="sv-search-divider"></div>
+
+            <div class="sv-search-field">
+                <label for="guests">
+                    <i class="bi bi-people me-2"></i>Guests
+                </label>
+
+                <select id="guests" name="guests">
+                    <option value="">Any guests</option>
+                    <option value="1">1 guest</option>
+                    <option value="2">2 guests</option>
+                    <option value="3">3 guests</option>
+                    <option value="4">4 guests</option>
+                    <option value="5">5+ guests</option>
+                </select>
+            </div>
+
+            <button type="submit" class="sv-search-button">
+                <i class="bi bi-search me-2"></i>
+                Find stays
+            </button>
+
+        </form>
+    </div>
+</section>
+
+
+<!-- ================= FEATURED DESTINATIONS ================= -->
+<section class="sv-section">
+    <div class="container">
+
+        <div class="sv-section-heading">
+            <div>
+                <span class="sv-section-label">A LITTLE INSPIRATION</span>
+                <h2>Where will you <span>go next?</span></h2>
+                <p>Every destination has a story. Find the one that's yours.</p>
+            </div>
+
+            <a href="/listings" class="sv-text-link">
+                Explore all stays <i class="bi bi-arrow-up-right"></i>
+            </a>
+        </div>
+
+        <div class="row g-4 mt-2">
+
+            <div class="col-6 col-lg-3">
+                <a href="/listings?location=mountains"
+                   class="sv-destination-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=700&q=80"
+                        alt="Majestic mountain landscape"
+                        loading="lazy">
+
+                    <div class="sv-destination-overlay">
+                        <span>01 / ADVENTURE</span>
+                        <h3>Mountains</h3>
+                        <p>Find your higher ground</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <a href="/listings?location=beach"
+                   class="sv-destination-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=700&q=80"
+                        alt="Beautiful ocean and beach"
+                        loading="lazy">
+
+                    <div class="sv-destination-overlay">
+                        <span>02 / RELAXATION</span>
+                        <h3>Beachside</h3>
+                        <p>Let the waves slow you down</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <a href="/listings?location=forest"
+                   class="sv-destination-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=700&q=80"
+                        alt="Serene green forest"
+                        loading="lazy">
+
+                    <div class="sv-destination-overlay">
+                        <span>03 / SLOW LIVING</span>
+                        <h3>Forest</h3>
+                        <p>Get closer to nature</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <a href="/listings?location=countryside"
+                   class="sv-destination-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?auto=format&fit=crop&w=700&q=80"
+                        alt="Charming countryside holiday home"
+                        loading="lazy">
+
+                    <div class="sv-destination-overlay">
+                        <span>04 / HIDDEN GEMS</span>
+                        <h3>Countryside</h3>
+                        <p>Escape the everyday</p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= WHY STAYVISTA ================= -->
+<section class="sv-benefits-section" id="why-stayvista">
+    <div class="container">
+
+        <div class="text-center sv-benefits-heading">
+            <span class="sv-section-label">THE STAYVISTA DIFFERENCE</span>
+            <h2>Travel feels better <span>when it feels like you.</span></h2>
+            <p>
+                Your trip deserves more than just a place to sleep.
+                Find a stay that makes the whole journey special.
+            </p>
+        </div>
+
+        <div class="row g-4 mt-4">
+
+            <div class="col-md-4">
+                <div class="sv-benefit-card">
+                    <div class="sv-benefit-icon">
+                        <i class="bi bi-house-heart"></i>
+                    </div>
+
+                    <h3>Stays with character</h3>
+                    <p>
+                        Discover unique homes and beautiful spaces
+                        for every kind of traveler.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="sv-benefit-card">
+                    <div class="sv-benefit-icon sv-icon-purple">
+                        <i class="bi bi-compass"></i>
+                    </div>
+
+                    <h3>Places worth exploring</h3>
+                    <p>
+                        Find inspiration for your next adventure,
+                        weekend escape, or long-awaited holiday.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="sv-benefit-card">
+                    <div class="sv-benefit-icon sv-icon-green">
+                        <i class="bi bi-heart"></i>
+                    </div>
+
+                    <h3>Memories that stay</h3>
+                    <p>
+                        Make room for slow mornings, new experiences,
+                        and moments you'll remember.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= HOST CTA ================= -->
+<section class="sv-host-section">
+    <div class="container">
+        <div class="sv-host-card">
+
+            <div class="sv-host-content">
+                <span class="sv-section-label">
+                    HAVE A PLACE TO SHARE?
+                </span>
+
+                <h2>Your space could be someone's <span>next story.</span></h2>
+
+                <p>
+                    Turn your property into a destination.
+                    Share your space with travelers looking for
+                    something special.
+                </p>
+
+                <a href="/listings/addListing" class="btn sv-btn-primary">
+                    Become a host
+                    <i class="bi bi-arrow-up-right ms-2"></i>
+                </a>
+            </div>
+
+            <div class="sv-host-icon">
+                <i class="bi bi-house-add"></i>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= FINAL CTA ================= -->
+<section class="sv-final-cta">
+    <div class="container text-center">
+
+        <i class="bi bi-suit-heart sv-final-icon"></i>
+
+        <h2>A change of place.<br><span>A change of perspective.</span></h2>
+
+        <p>
+            Your next favorite memory is waiting somewhere.
+            Let's help you find it.
+        </p>
+
+        <a href="/listings" class="btn sv-btn-primary">
+            Find your next stay
+            <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+
+    </div>
+</section>
+
+
+<!-- ================= HOMEPAGE STYLES ================= -->
+<style>
+    :root {
+        --sv-primary: #e63946;
+        --sv-primary-dark: #c92a38;
+        --sv-ink: #252638;
+        --sv-muted: #747586;
+        --sv-soft: #fff6f5;
+        --sv-purple: #7775d9;
+    }
+
+    body {
+        font-family: "DM Sans", sans-serif;
+        color: var(--sv-ink);
+        background: #fff;
+    }
+
+    .min-vh-75 {
+        min-height: 75vh;
+    }
+
+    .sv-hero {
+        position: relative;
+        overflow: hidden;
+        background:
+            radial-gradient(circle at 5% 15%, #ffe2e3 0, transparent 35%),
+            linear-gradient(135deg, #fff8f5, #f5f4ff);
+    }
+
+    .sv-hero-bg {
+        position: absolute;
+        width: 350px;
+        height: 350px;
+        right: -140px;
+        top: -150px;
+        border-radius: 50%;
+        background: rgba(230, 57, 70, 0.08);
+        filter: blur(3px);
+        pointer-events: none;
+    }
+
+    .sv-eyebrow,
+    .sv-section-label {
+        color: var(--sv-primary);
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
+    .sv-hero-title,
+    .sv-section-heading h2,
+    .sv-benefits-heading h2,
+    .sv-host-content h2,
+    .sv-final-cta h2 {
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        letter-spacing: -1.2px;
+    }
+
+    .sv-hero-title {
+        max-width: 650px;
+        font-size: clamp(3rem, 6.5vw, 5.5rem);
+        line-height: 1.08;
+    }
+
+    .sv-hero-title span,
+    .sv-section-heading h2 span,
+    .sv-benefits-heading h2 span,
+    .sv-host-content h2 span,
+    .sv-final-cta h2 span {
+        color: var(--sv-primary);
+    }
+
+    .sv-hero-text {
+        max-width: 510px;
+        color: var(--sv-muted);
+        font-size: 1.08rem;
+        line-height: 1.9;
+    }
+
+    .sv-btn-primary,
+    .sv-btn-outline {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 50px;
+        padding: 13px 23px;
+        border-radius: 12px;
+        font-size: 0.94rem;
+        font-weight: 700;
+        transition: 0.25s ease;
+    }
+
+    .sv-btn-primary {
+        color: #fff;
+        background: linear-gradient(135deg, #e63946, #ff6975);
+        box-shadow: 0 9px 24px rgba(230, 57, 70, 0.2);
+    }
+
+    .sv-btn-primary:hover {
+        color: #fff;
+        background: var(--sv-primary-dark);
+        transform: translateY(-3px);
+        box-shadow: 0 13px 28px rgba(230, 57, 70, 0.25);
+    }
+
+    .sv-btn-outline {
+        color: var(--sv-ink);
+        border: 1px solid #dedee7;
+        background: rgba(255, 255, 255, 0.65);
+    }
+
+    .sv-btn-outline:hover {
+        color: var(--sv-primary);
+        border-color: var(--sv-primary);
+        transform: translateY(-3px);
+    }
+
+    .sv-trust-row {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .sv-avatar-stack {
+        display: flex;
+        padding-left: 5px;
+    }
+
+    .sv-avatar-stack span {
+        display: grid;
+        place-items: center;
+        width: 36px;
+        height: 36px;
+        margin-left: -5px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        background: #f1d7d0;
+        color: #543b3c;
+        font-size: 0.75rem;
+        font-weight: 700;
+    }
+
+    .sv-avatar-stack span:nth-child(2) {
+        background: #dcdafa;
+    }
+
+    .sv-avatar-stack span:nth-child(3) {
+        background: #d7e9dc;
+    }
+
+    .sv-avatar-stack span:nth-child(4) {
+        background: var(--sv-primary);
+        color: #fff;
+    }
+
+    .sv-stars {
+        color: #e6a32b;
+        font-size: 0.78rem;
+        letter-spacing: 2px;
+    }
+
+    .sv-trust-row small {
+        color: var(--sv-muted);
+        font-size: 0.76rem;
+    }
+
+    .sv-hero-image-wrap {
+        position: relative;
+        max-width: 460px;
+        margin-left: auto;
+        padding: 12px;
+    }
+
+    .sv-hero-image {
+        display: block;
+        width: 100%;
+        height: 520px;
+        object-fit: cover;
+        border-radius: 46% 46% 24px 24px;
+        box-shadow: 0 25px 65px rgba(45, 40, 65, 0.16);
+    }
+
+    .sv-floating-card {
+        position: absolute;
+        left: -28px;
+        bottom: 70px;
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        padding: 16px 19px;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        border-radius: 17px;
+        background: rgba(255, 255, 255, 0.94);
+        box-shadow: 0 12px 35px rgba(45, 40, 65, 0.12);
+    }
+
+    .sv-floating-icon {
+        display: grid;
+        place-items: center;
+        width: 44px;
+        height: 44px;
+        flex-shrink: 0;
+        border-radius: 13px;
+        background: #fff0f1;
+        color: var(--sv-primary);
+        font-size: 1.3rem;
+    }
+
+    .sv-floating-card strong {
+        display: block;
+        font-size: 0.88rem;
+    }
+
+    .sv-floating-card p {
+        margin-top: 3px;
+        color: var(--sv-muted);
+        font-size: 0.75rem;
+    }
+
+    .sv-image-badge {
+        position: absolute;
+        top: 35px;
+        right: -4px;
+        padding: 11px 15px;
+        border-radius: 30px;
+        background: #fff;
+        box-shadow: 0 8px 25px rgba(45, 40, 65, 0.1);
+        font-size: 0.78rem;
+        font-weight: 700;
+    }
+
+    /* Search */
+    .sv-search-section {
+        position: relative;
+        z-index: 2;
+        margin-top: -30px;
+    }
+
+    .sv-search-box {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        padding: 20px 23px;
+        border: 1px solid #f0edf0;
+        border-radius: 20px;
+        background: #fff;
+        box-shadow: 0 18px 55px rgba(45, 40, 65, 0.09);
+    }
+
+    .sv-search-field {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .sv-search-field label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 0.8rem;
+        font-weight: 700;
+    }
+
+    .sv-search-field label i {
+        color: var(--sv-primary);
+    }
+
+    .sv-search-field input,
+    .sv-search-field select {
+        width: 100%;
+        min-height: 28px;
+        border: 0;
+        outline: none;
+        background: transparent;
+        color: var(--sv-muted);
+        font: inherit;
+        font-size: 0.88rem;
+    }
+
+    .sv-search-divider {
+        width: 1px;
+        height: 45px;
+        flex-shrink: 0;
+        background: #ecebf0;
+    }
+
+    .sv-search-button {
+        min-height: 50px;
+        padding: 13px 21px;
+        flex-shrink: 0;
+        border: 0;
+        border-radius: 12px;
+        background: var(--sv-primary);
+        color: #fff;
+        font-weight: 700;
+        cursor: pointer;
+        transition: 0.2s ease;
+    }
+
+    .sv-search-button:hover {
+        background: var(--sv-primary-dark);
+    }
+
+    /* Shared sections */
+    .sv-section {
+        padding: 100px 0;
+    }
+
+    .sv-section-heading {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 24px;
+    }
+
+    .sv-section-heading h2,
+    .sv-benefits-heading h2 {
+        margin-top: 12px;
+        font-size: clamp(2rem, 4vw, 3.1rem);
+        line-height: 1.2;
+    }
+
+    .sv-section-heading p,
+    .sv-benefits-heading > p {
+        margin-top: 13px;
+        color: var(--sv-muted);
+        line-height: 1.8;
+    }
+
+    .sv-text-link {
+        flex-shrink: 0;
+        padding-bottom: 6px;
+        color: var(--sv-primary);
+        font-size: 0.88rem;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    .sv-text-link:hover {
+        color: var(--sv-primary-dark);
+    }
+
+    /* Destination cards */
+    .sv-destination-card {
+        position: relative;
+        display: block;
+        height: 360px;
+        overflow: hidden;
+        border-radius: 18px;
+        color: #fff;
+        background: #e8e6e8;
+        text-decoration: none;
+        isolation: isolate;
+    }
+
+    .sv-destination-card::after {
+        position: absolute;
+        z-index: 0;
+        inset: 0;
+        content: "";
+        background: linear-gradient(
+            to top,
+            rgba(17, 19, 32, 0.83),
+            rgba(17, 19, 32, 0.03) 70%
+        );
+    }
+
+    .sv-destination-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .sv-destination-card:hover img {
+        transform: scale(1.07);
+    }
+
+    .sv-destination-overlay {
+        position: absolute;
+        z-index: 1;
+        right: 17px;
+        bottom: 20px;
+        left: 17px;
+    }
+
+    .sv-destination-overlay span {
+        font-size: 0.61rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+    }
+
+    .sv-destination-overlay h3 {
+        margin: 8px 0 4px;
+        font-family: "Playfair Display", serif;
+        font-size: 1.65rem;
+        font-weight: 700;
+    }
+
+    .sv-destination-overlay p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 0.78rem;
+    }
+
+    /* Benefits */
+    .sv-benefits-section {
+        padding: 95px 0;
+        background: #faf9fc;
+    }
+
+    .sv-benefits-heading {
+        max-width: 760px;
+        margin: 0 auto;
+    }
+
+    .sv-benefit-card {
+        height: 100%;
+        padding: 32px 27px;
+        border: 1px solid #eeedf2;
+        border-radius: 19px;
+        background: #fff;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .sv-benefit-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 18px 40px rgba(45, 40, 65, 0.07);
+    }
+
+    .sv-benefit-icon {
+        display: grid;
+        place-items: center;
+        width: 55px;
+        height: 55px;
+        margin-bottom: 22px;
+        border-radius: 16px;
+        background: #fff0f1;
+        color: var(--sv-primary);
+        font-size: 1.55rem;
+    }
+
+    .sv-icon-purple {
+        color: #7775d9;
+        background: #f0efff;
+    }
+
+    .sv-icon-green {
+        color: #399b75;
+        background: #eaf8f0;
+    }
+
+    .sv-benefit-card h3 {
+        margin-bottom: 11px;
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+
+    .sv-benefit-card p {
+        margin-bottom: 0;
+        color: var(--sv-muted);
+        font-size: 0.91rem;
+        line-height: 1.8;
+    }
+
+    /* Host CTA */
+    .sv-host-section {
+        padding: 90px 0;
+    }
+
+    .sv-host-card {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        overflow: hidden;
+        padding: clamp(30px, 6vw, 65px);
+        border-radius: 25px;
+        background:
+            radial-gradient(circle at 95% 10%, #ffe2e3 0, transparent 35%),
+            linear-gradient(120deg, #fff5f2, #f3f2ff);
+    }
+
+    .sv-host-content {
+        position: relative;
+        z-index: 1;
+        max-width: 650px;
+    }
+
+    .sv-host-content h2 {
+        margin-top: 15px;
+        font-size: clamp(2rem, 4vw, 3.4rem);
+        line-height: 1.2;
+    }
+
+    .sv-host-content p {
+        max-width: 520px;
+        margin: 18px 0 25px;
+        color: var(--sv-muted);
+        line-height: 1.9;
+    }
+
+    .sv-host-icon {
+        flex-shrink: 0;
+        padding-right: 25px;
+        color: rgba(230, 57, 70, 0.16);
+        font-size: clamp(6rem, 15vw, 12rem);
+    }
+
+    /* Final CTA */
+    .sv-final-cta {
+        padding: 80px 0 100px;
+        background: #fff;
+    }
+
+    .sv-final-icon {
+        color: var(--sv-primary);
+        font-size: 2.5rem;
+    }
+
+    .sv-final-cta h2 {
+        margin-top: 18px;
+        font-size: clamp(2.1rem, 5vw, 3.8rem);
+        line-height: 1.2;
+    }
+
+    .sv-final-cta p {
+        max-width: 550px;
+        margin: 18px auto 25px;
+        color: var(--sv-muted);
+        line-height: 1.9;
+    }
+
+    /* Responsive */
+    @media (max-width: 991.98px) {
+        .min-vh-75 {
+            min-height: auto;
+        }
+
+        .sv-hero-title {
+            max-width: 600px;
+        }
+
+        .sv-search-section {
+            margin-top: -15px;
+        }
+
+        .sv-section {
+            padding: 75px 0;
+        }
+
+        .sv-destination-card {
+            height: 320px;
+        }
+
+        .sv-host-icon {
+            padding-right: 0;
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        .sv-hero-title {
+            font-size: clamp(2.8rem, 10vw, 4.2rem);
+        }
+
+        .sv-hero-text {
+            font-size: 1rem;
+        }
+
+        .sv-search-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            padding: 20px;
+        }
+
+        .sv-search-divider {
+            display: none;
+        }
+
+        .sv-search-button {
+            grid-column: 1 / -1;
+            width: 100%;
+        }
+
+        .sv-section-heading {
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .sv-destination-card {
+            height: 300px;
+        }
+
+        .sv-benefits-section {
+            padding: 75px 0;
+        }
+
+        .sv-host-card {
+            padding: 35px 28px;
+        }
+
+        .sv-host-icon {
+            display: none;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .sv-hero .container > .row {
+            padding-top: 30px !important;
+            padding-bottom: 45px !important;
+        }
+
+        .sv-eyebrow,
+        .sv-section-label {
+            font-size: 0.67rem;
+            letter-spacing: 1.3px;
+        }
+
+        .sv-hero-title {
+            margin-top: 20px !important;
+            font-size: clamp(2.65rem, 12vw, 3.6rem);
+            letter-spacing: -1.5px;
+        }
+
+        .sv-hero-text {
+            line-height: 1.75;
+        }
+
+        .sv-btn-primary,
+        .sv-btn-outline {
+            width: 100%;
+            min-height: 48px;
+            padding: 12px 15px;
+        }
+
+        .sv-trust-row {
+            gap: 10px;
+        }
+
+        .sv-trust-row small {
+            font-size: 0.68rem;
+        }
+
+        .sv-search-box {
+            grid-template-columns: 1fr;
+            gap: 16px;
+            padding: 19px;
+            border-radius: 16px;
+        }
+
+        .sv-search-button {
+            grid-column: auto;
+        }
+
+        .sv-section {
+            padding: 60px 0;
+        }
+
+        .sv-section-heading h2,
+        .sv-benefits-heading h2 {
+            font-size: 2.15rem;
+        }
+
+        .sv-destination-card {
+            height: 245px;
+            border-radius: 14px;
+        }
+
+        .sv-destination-overlay {
+            right: 10px;
+            bottom: 14px;
+            left: 10px;
+        }
+
+        .sv-destination-overlay span {
+            font-size: 0.52rem;
+            letter-spacing: 0.8px;
+        }
+
+        .sv-destination-overlay h3 {
+            font-size: 1.25rem;
+        }
+
+        .sv-destination-overlay p {
+            font-size: 0.69rem;
+        }
+
+        .sv-benefit-card {
+            padding: 25px 22px;
+        }
+
+        .sv-host-section {
+            padding: 60px 0;
+        }
+
+        .sv-host-card {
+            padding: 30px 22px;
+            border-radius: 19px;
+        }
+
+        .sv-host-content h2 {
+            font-size: 2.15rem;
+        }
+
+        .sv-final-cta {
+            padding: 60px 0 75px;
+        }
+
+        .sv-final-cta h2 {
+            font-size: 2.25rem;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .sv-hero-title {
+            font-size: 2.45rem;
+        }
+
+        .sv-destination-card {
+            height: 210px;
+        }
+
+        .sv-destination-overlay h3 {
+            font-size: 1.1rem;
+        }
+
+        .sv-destination-overlay p {
+            display: none;
+        }
+
+        .sv-host-content h2,
+        .sv-final-cta h2 {
+            font-size: 1.9rem;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            scroll-behavior: auto !important;
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+</style>

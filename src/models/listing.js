@@ -1,9 +1,8 @@
 const mongoose = require('mongoose');
 const review = require('./review');
-const Schema = mongoose.Schema;
 
 // ✅ Sub-schema for image
-const imageSchema = new Schema({
+const imageSchema = new mongoose.Schema({
   filename: {
     type: String,
     default: "listingimage"
@@ -19,8 +18,8 @@ const imageSchema = new Schema({
   },
 });
 
-// ✅ Main Listing Schema
-const listingSchema = new Schema({
+// Listing Schema Design
+const listingSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
@@ -55,7 +54,7 @@ const listingSchema = new Schema({
     ref: "Review"
   }],
   owner: {
-    type : Schema.Types.ObjectId,
+    type : mongoose.Schema.Types.ObjectId,
     ref : 'User',
     required: true
   }

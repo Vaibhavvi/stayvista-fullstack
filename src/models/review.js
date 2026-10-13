@@ -1,8 +1,7 @@
 const express = require('express');
 const { default: mongoose } = require('mongoose');
-const Schema = mongoose.Schema;
 
-const reviewSchema = new Schema({
+const reviewSchema = new mongoose.Schema({
   comment: {
     type: String,
     required: true,
@@ -16,4 +15,6 @@ const reviewSchema = new Schema({
   }
 }, { timestamps: true }); // ✅ Automatically adds createdAt & updatedAt
 
-module.exports = mongoose.model("Review", reviewSchema);
+// Create model
+const Review = mongoose.model("Review", reviewSchema);
+module.exports = Review;

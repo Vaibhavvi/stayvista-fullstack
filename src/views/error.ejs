@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <%
+    const status = err?.statusCode || err?.status || 500;
+    const errorTitles = {
+      400: "Bad Request",
+      401: "Unauthorized",
+      403: "Access Denied",
+      404: "Page Not Found",
+      500: "Internal Server Error"
+    };
+
+    const title = errorTitles[status] || "Something Went Wrong";
+    const message = status >= 500
+      ? "Something went wrong on our end. Please try again later."
+      : (err?.message || "We couldn't complete your request.");
+  %>
+
+  <title><%= status %> - <%= title %> | StayVista</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="/css/error.css">
+</head>
+
+<body>
+  <div class="background-shape shape-one"></div>
+  <div class="background-shape shape-two"></div>
+
+  <main class="error-card">
+    <div class="error-icon" aria-hidden="true">!</div>
+
+    <p class="eyebrow">StayVista · Oops!</p>
+
+    <div class="error-code"><%= status %></div>
+
+    <h1><%= title %></h1>
+
+    <p class="error-message"><%= message %></p>
+
+    <div class="actions">
+      <a href="/listings" class="btn btn-primary">
+        <span aria-hidden="true">⌂</span>
+        Explore Listings
+      </a>
+
+      <a href="/" class="btn btn-secondary">
+        ← Back to Home
+      </a>
+    </div>
+
+    <p class="footer-note">
+      Don't worry — let's get you back on track.
+    </p>
+  </main>
+</body>
+</html>
