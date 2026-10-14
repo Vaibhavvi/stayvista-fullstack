@@ -22,11 +22,16 @@ module.exports.registerUser = async (req, res, next) => {
         `Welcome, ${username}! Your account was created.`
       );
 
-      res.redirect("/");
+      return res.redirect("/");
     });
   } catch (err) {
-    req.flash("error", err.message);
-    res.redirect("/register");
+    if (err.name === "UserExistsError") {
+      req.flash("error", "Username already exists! Please choose another.");
+    } else {
+      req.flash("error", err.message || "Registration failed. Please try again.");
+    }
+
+    return res.redirect("/register");
   }
 };
 
@@ -42,12 +47,19 @@ module.exports.loginUser = [
     failureFlash: true,
   }),
 
-  (req, res) => {
+  (req, res, next) => {
+    const redirectUrl = req.session.redirectUrl || "/";
+    delete req.session.redirectUrl;
+
     req.flash("success", `Welcome back, ${req.user.username}!`);
 
-    res.redirect(res.locals.redirectUrl || "/");
+    req.session.save((err) => {
+      if (err) return next(err);
+      res.redirect(redirectUrl);
+    });
   },
 ];
+
 
 // ---------- Logout ----------
 module.exports.logoutUser = (req, res, next) => {
