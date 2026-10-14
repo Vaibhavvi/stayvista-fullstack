@@ -1,50 +1,32 @@
 <% layout('layout/boilerplate') %>
 
 <style>
-  /* === Card Styling === */
+  .register-page {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 16px;
+    background:
+      radial-gradient(circle at 10% 10%, rgba(25, 135, 84, .09), transparent 35%),
+      radial-gradient(circle at 90% 90%, rgba(13, 110, 253, .07), transparent 35%);
+  }
+
   .register-card {
-    animation: fadeInUp 0.8s ease;
-    background: #fff;
-    border-radius: 20px;
-    width: 400px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 40px 0; /* 👈 Adds subtle space top & bottom of card */
+    width: 100%;
+    max-width: 460px;
+    padding: 38px;
+    border: 1px solid rgba(255, 255, 255, .85);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, .97);
+    box-shadow: 0 20px 60px rgba(24, 39, 30, .10);
+    animation: registerFadeIn .6s ease both;
   }
 
-  .register-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  }
-
-  /* === Gradient Text === */
-  .text-gradient {
-    background: linear-gradient(90deg, #16a085, #f4d03f);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 700;
-  }
-
-  /* === Gradient Button === */
-  .btn-gradient {
-    background: linear-gradient(90deg, #27ae60, #16a085);
-    border: none;
-    color: white;
-    font-weight: 600;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-  }
-
-  .btn-gradient:hover {
-    background: linear-gradient(90deg, #2ecc71, #1abc9c);
-    transform: scale(1.02);
-  }
-
-  /* === Animation === */
-  @keyframes fadeInUp {
+  @keyframes registerFadeIn {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(16px);
     }
     to {
       opacity: 1;
@@ -52,56 +34,251 @@
     }
   }
 
-  /* === Responsive Adjustments === */
-  @media (max-width: 576px) {
+  .register-icon {
+    width: 62px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    border-radius: 20px;
+    color: #fff;
+    background: linear-gradient(135deg, #198754, #20a875);
+    box-shadow: 0 8px 20px rgba(25, 135, 84, .22);
+    font-size: 28px;
+  }
+
+  .register-title {
+    color: #172b21;
+    font-size: 1.9rem;
+    font-weight: 750;
+    letter-spacing: -.8px;
+  }
+
+  .register-subtitle {
+    color: #78847d;
+    font-size: .94rem;
+    line-height: 1.6;
+  }
+
+  .register-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #293b31;
+    font-size: .9rem;
+    font-weight: 650;
+  }
+
+  .register-input-wrap {
+    position: relative;
+  }
+
+  .register-input-wrap > i {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #849188;
+    font-size: 17px;
+    pointer-events: none;
+  }
+
+  .register-input {
+    min-height: 52px;
+    padding: 12px 14px 12px 44px;
+    border: 1px solid #e0e8e2;
+    border-radius: 12px;
+    background: #fbfcfb;
+    color: #24372c;
+    transition: border-color .2s, box-shadow .2s, background .2s;
+  }
+
+  .register-input::placeholder {
+    color: #a2aca5;
+  }
+
+  .register-input:focus {
+    border-color: #198754;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(25, 135, 84, .10);
+  }
+
+  .register-btn {
+    min-height: 52px;
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #198754, #20a875);
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 0 8px 18px rgba(25, 135, 84, .18);
+    transition: transform .2s, box-shadow .2s;
+  }
+
+  .register-btn:hover {
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(25, 135, 84, .25);
+  }
+
+  .register-alert {
+    border: 0;
+    border-radius: 12px;
+    font-size: .9rem;
+  }
+
+  .register-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 24px 0 18px;
+    color: #a0aaa3;
+    font-size: .8rem;
+  }
+
+  .register-divider::before,
+  .register-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #e9eeea;
+  }
+
+  .register-footer {
+    margin: 0;
+    color: #78847d;
+    font-size: .92rem;
+    text-align: center;
+  }
+
+  .register-footer a {
+    color: #198754;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .register-footer a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 480px) {
+    .register-page {
+      min-height: auto;
+      padding: 28px 12px;
+    }
+
     .register-card {
-      width: 100%;
-      margin: 20px 0;
+      padding: 28px 22px;
+      border-radius: 20px;
+    }
+
+    .register-title {
+      font-size: 1.7rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .register-card {
+      animation: none;
+    }
+
+    .register-input,
+    .register-btn {
+      transition: none;
     }
   }
 </style>
 
-<div class="container d-flex justify-content-center align-items-center">
-  <div class="card register-card shadow-lg p-4">
-    <h2 class="text-center mb-3 fw-bold text-gradient">Create Account</h2>
-    <p class="text-center text-muted mb-4">Join our community today 🏡</p>
+<div class="register-page">
+  <div class="register-card">
+    <div class="register-icon">
+      <i class="bi bi-house-heart-fill" aria-hidden="true"></i>
+    </div>
+
+    <div class="text-center mb-4">
+      <h1 class="register-title mb-2">Create your account</h1>
+      <p class="register-subtitle mb-0">
+        Join StayVista and discover your next getaway.
+      </p>
+    </div>
 
     <% if (error && error.length) { %>
-      <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <%= error %>
-        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+      <div class="alert alert-danger register-alert alert-dismissible fade show" role="alert">
+        <% error.forEach((message) => { %>
+          <div><%= message %></div>
+        <% }) %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
     <% } %>
 
     <% if (success && success.length) { %>
-      <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <%= success %>
-        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+      <div class="alert alert-success register-alert alert-dismissible fade show" role="alert">
+        <% success.forEach((message) => { %>
+          <div><%= message %></div>
+        <% }) %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
     <% } %>
 
     <form action="/register" method="POST">
       <div class="mb-3">
-        <label for="username" class="form-label fw-semibold">Username</label>
-        <input type="text" class="form-control form-control-lg" id="username" name="username" placeholder="Enter your username" required>
+        <label for="username" class="register-label">Username</label>
+        <div class="register-input-wrap">
+          <i class="bi bi-person" aria-hidden="true"></i>
+          <input
+            type="text"
+            class="form-control register-input"
+            id="username"
+            name="username"
+            autocomplete="username"
+            required
+            placeholder="Choose a username"
+          >
+        </div>
       </div>
 
       <div class="mb-3">
-        <label for="email" class="form-label fw-semibold">Email address</label>
-        <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="Enter your email" required>
+        <label for="email" class="register-label">Email address</label>
+        <div class="register-input-wrap">
+          <i class="bi bi-envelope" aria-hidden="true"></i>
+          <input
+            type="email"
+            class="form-control register-input"
+            id="email"
+            name="email"
+            autocomplete="email"
+            required
+            placeholder="Enter your email"
+          >
+        </div>
       </div>
 
       <div class="mb-4">
-        <label for="password" class="form-label fw-semibold">Password</label>
-        <input type="password" class="form-control form-control-lg" id="password" name="password" placeholder="Enter your password" required>
+        <label for="password" class="register-label">Password</label>
+        <div class="register-input-wrap">
+          <i class="bi bi-lock" aria-hidden="true"></i>
+          <input
+            type="password"
+            class="form-control register-input"
+            id="password"
+            name="password"
+            autocomplete="new-password"
+            required
+            placeholder="Create a password"
+          >
+        </div>
       </div>
 
-      <button type="submit" class="btn btn-gradient w-100 py-2 fw-semibold">Register</button>
+      <button type="submit" class="btn register-btn w-100">
+        Create Account
+        <i class="bi bi-arrow-right ms-2" aria-hidden="true"></i>
+      </button>
     </form>
 
-    <p class="text-center mt-3 mb-0 text-muted">
+    <div class="register-divider">ALREADY A MEMBER?</div>
+
+    <p class="register-footer">
       Already have an account?
-      <a href="/login" class="text-gradient fw-semibold text-decoration-none">Login here</a>
+      <a href="/login">Login here</a>
     </p>
   </div>
 </div>
